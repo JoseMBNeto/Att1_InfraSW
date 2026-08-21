@@ -8,7 +8,7 @@ Tarefas criarTarefa (char *nome, char **palavras, int quantiaPalavras){
 
     tarefaNova.argumentos = malloc ((quantiaPalavras + 1) * sizeof(char *));
     
-    for (int i=0; i < quantiaPalavras; i++){
+    for (int i = 0; i < quantiaPalavras; i++){
         tarefaNova.argumentos[i] = palavras[i];
     }
     

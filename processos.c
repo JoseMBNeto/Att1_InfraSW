@@ -1,0 +1,51 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+#include "processos.h"
+#include <sys/wait.h>
+
+pid_t processarTarefa(Tarefas tarefa){
+
+    pid_t pid = fork();
+
+    if (pid == 0){
+        execvp(tarefa.argumentos[0], tarefa.argumentos);
+
+        fprintf(stderr, "O programa não pode ser executado");
+        exit(1);
+
+    }else if (pid > 0){
+        return pid;
+    }else{
+        fprintf(stderr, "Não foi possível processar a tarefa, tente novamente\n");
+        return -1;
+    }
+}
+
+void processoSequencia(Tarefas *lista, int quantidade){
+    
+    for (int i = 0; i < quantidade; i++){
+        pid_t pid = processarTarefa(lista[i]);
+
+        if (pid > 0){
+            int status = 0;
+            waitpid(pid, &status, 0);       
+        }
+    }
+}
+
+void processoParalelo(Tarefas *lista, int quantidade){
+    pid_t *pids = malloc((quantidade) * sizeof(pid_t));
+    
+    for (int i = 0; i < quantidade; i++){
+        pids[i] = processarTarefa(lista[i]);
+    }
+
+    for (int i = 0; i < quantidade; i++){
+        if (pids[i] > 0){
+            int status = 0;
+            waitpid(pids[i], &status, 0);
+        }
+    }
+    free(pids);
+}
