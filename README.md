@@ -1,12 +1,21 @@
-# Att1_InfraSW# Orquestrador de Processos
+# Orquestrador de Processos
 
 ### Aluno: José Milton Batista Neto 
 ### Turma: 3A
 
-Esse README é focado em mostrar como compilar o programa e documentar o desenvolvimento diário do projeto
+# Como compilar esse projeto
 
-## Dia 1 do projeto  
-Hoje, dia 17/08/2026 foi focado em entender a atividade e listar as funcionalidades que devo fazer durante a semana.
+### Comandos disponíveis no makefile: 
 
-## Dia 2 do projeto
-Hoje, dia 18/08/2026 eu tentei formar uma base do arquivo main e atualizei como deveria estar o Makefile
+```
+Make processflow - Compila os arquivos .c e .h para o processflow
+
+Make clean - Limpa todos os arquivos .o criados pelo make
+
+Make log - Roda o scrip para atualizar o evidencias.log
+
+```
+
+### Compilando o projeto:
+
+### Digite Make processflow

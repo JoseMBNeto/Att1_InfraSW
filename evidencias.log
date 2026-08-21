@@ -1,0 +1,63 @@
+Script started on 2026-08-21 15:20:23-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="12"]
+Fri Aug 21 15:20:23 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/Att1_InfraSW
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ make teste
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+gcc -c teste.c
+gcc -c tarefas.c
+gcc -c processos.c
+gcc teste.o tarefas.o processos.o -o teste
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ make pre[Kocessflow
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+gcc -c main.c
+gcc main.o tarefas.o processos.o -o processflow
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ ./teste
+[?2004lTarefa criada
+total 88
+-rw-r--r-- 1 miltonlnx miltonlnx   456 Aug 21 15:16 Makefile
+-rw-r--r-- 1 miltonlnx miltonlnx   518 Aug 19 19:23 README.md
+-rw-r--r-- 1 miltonlnx miltonlnx     0 Aug 21 15:20 evidencias.log
+-rw-r--r-- 1 miltonlnx miltonlnx   636 Aug 21 12:07 main.c
+-rw-r--r-- 1 miltonlnx miltonlnx  2216 Aug 21 15:20 main.o
+-rwxr-xr-x 1 miltonlnx miltonlnx 16624 Aug 21 15:20 processflow
+-rw-r--r-- 1 miltonlnx miltonlnx  1142 Aug 21 12:35 processos.c
+-rw-r--r-- 1 miltonlnx miltonlnx   254 Aug 19 18:56 processos.h
+-rw-r--r-- 1 miltonlnx miltonlnx  3088 Aug 21 15:20 processos.o
+-rw-r--r-- 1 miltonlnx miltonlnx   597 Aug 21 12:24 tarefas.c
+-rw-r--r-- 1 miltonlnx miltonlnx   295 Aug 21 15:05 tarefas.h
+-rw-r--r-- 1 miltonlnx miltonlnx  1592 Aug 21 15:20 tarefas.o
+-rwxr-xr-x 1 miltonlnx miltonlnx 16576 Aug 21 15:20 teste
+-rw-r--r-- 1 miltonlnx miltonlnx   293 Aug 21 15:19 teste.c
+-rw-r--r-- 1 miltonlnx miltonlnx  1968 Aug 21 15:20 teste.o
+Teste feito!
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ exitg[K
+[?2004lexit
+
+Script done on 2026-08-21 15:20:47-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-21 16:40:32-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="17"]
+Fri Aug 21 16:40:32 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/Att1_InfraSW
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ make processflow
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+gcc -c main.c
+gcc -c tarefas.c
+gcc -c processos.c
+gcc main.o tarefas.o processos.o -o processflow
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ ./pro[K[K[K[K/processflow
+[?2004l
+Modo interativo
+processflow> hhhh    teste teste
+
+Linha lida: teste teste
+processflow> exit
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ ./processflow ola ela[K[K[Koi oi 
+[?2004lFalhou
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-21 16:42:04-03:00 [COMMAND_EXIT_CODE="1"]
