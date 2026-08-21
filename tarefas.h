@@ -10,5 +10,6 @@ typedef struct Tarefas{
     int modoSaida;
 }Tarefas;
 
+Tarefas criarTarefa (char *nome, char **palavras, int quantiaPalavras);
 
 #endif
