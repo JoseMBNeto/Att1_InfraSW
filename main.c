@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include "separador.h"
 
 int main(int argc, char *argv[]) {
     
@@ -18,7 +19,7 @@ int main(int argc, char *argv[]) {
 
     if (argc == 2){
            modo = 1;
-           fprintf(stderr,"Modo workflow\n");
+           printf("Modo workflow\n");
            pont_arquivo = fopen(argv[1], "r");
            if (pont_arquivo == NULL){
             fprintf(stderr,"\nNão foi possível abrir o arquivo\n");
@@ -26,7 +27,7 @@ int main(int argc, char *argv[]) {
            }
     }else{
         modo = 0;
-        fprintf(stderr,"\nModo interativo\n");
+        printf("Modo interativo\n");
     }
     
     char *linha = NULL;
@@ -61,7 +62,15 @@ int main(int argc, char *argv[]) {
             break;
         }
 
-        printf("\nLinha lida: %s\n", linha);
+        //printf("Linha lida: %s\n", linha);
+
+        //Testando o separador
+        char *palavras[50];
+        int quantidade = separarPalavras(linha, palavras);
+
+        for (int i = 0; i < quantidade; i++){
+            printf("palavra[%d] = %s\n", i, palavras[i]);
+        }
     }
 
     if (modo == 1){

@@ -1,5 +1,5 @@
-processflow: main.o tarefas.o processos.o
-	gcc main.o tarefas.o processos.o -o processflow
+processflow: main.o tarefas.o processos.o separador.o
+	gcc main.o tarefas.o processos.o separador.o -o processflow
 
 teste: teste.o tarefas.o processos.o
 	gcc teste.o tarefas.o processos.o -o teste
@@ -9,6 +9,9 @@ main.o: main.c
 
 teste.o: teste.c
 	gcc -c teste.c
+
+separador.o: separador.c separador.h
+	gcc -c separador.c
 
 tarefas.o: tarefas.c tarefas.h
 	gcc -c tarefas.c
