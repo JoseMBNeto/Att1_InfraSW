@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <fcntl.h>
 #include <unistd.h>
 #include "processos.h"
 #include <sys/wait.h>
@@ -9,6 +10,31 @@ pid_t processarTarefa(Tarefas tarefa){
     pid_t pid = fork();
 
     if (pid == 0){
+
+        if (tarefa.arquivoEntrada != NULL){
+            int descritorEntrada = open(tarefa.arquivoEntrada, O_RDONLY);
+            if (descritorEntrada == -1){
+                fprintf(stderr, "Arquivo de entrada nao encontrado\n");
+                exit(1);
+            }
+            dup2(descritorEntrada, 0);
+        }
+
+        if (tarefa.arquivoSaida != NULL){
+            int descritorSaida = 0;
+            if (tarefa.modoSaida == 1){
+                descritorSaida = open(tarefa.arquivoSaida, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+            }else if (tarefa.modoSaida == 2){
+                descritorSaida = open(tarefa.arquivoSaida, O_WRONLY | O_CREAT | O_APPEND, 0644);
+            }
+
+            if (descritorSaida == -1){
+                fprintf(stderr, "Arquivo de saida nao encontrado\n");
+                exit(1);
+            }
+            dup2(descritorSaida, 1);
+        }
+
         execvp(tarefa.argumentos[0], tarefa.argumentos);
 
         fprintf(stderr, "O programa não pode ser executado");

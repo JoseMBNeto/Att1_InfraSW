@@ -115,7 +115,61 @@ int main(int argc, char *argv[]) {
             }
 
 
+        }else if(strcmp(palavras[0], "input") == 0){
+            if (quantidade != 3){
+                fprintf(stderr, "Quantidade de arguemntos errada para input, tente denovo\n");
+                continue;
+            }
+
+            char *nomeTarefa = palavras[1];
+            char *caminhoArquivo = palavras[2];
+            Tarefas *tarefaEncontrada = buscarTarefa(nomeTarefa);
+
+            if (tarefaEncontrada == NULL){
+                fprintf(stderr, "A tarefa nao existe\n");
+                continue;
+            }
+
+            tarefaEncontrada->arquivoEntrada = strdup(caminhoArquivo);
+
+        }else if(strcmp(palavras[0], "output") == 0){
+            if (quantidade != 3){
+                fprintf(stderr, "Quantidade de arguemntos errada para output, tente denovo\n");
+                continue;
+            }
+
+            char *nomeTarefa = palavras[1];
+            char *caminhoArquivo = palavras[2];
+            Tarefas *tarefaEncontrada = buscarTarefa(nomeTarefa);
+
+            if (tarefaEncontrada == NULL){
+                fprintf(stderr, "A tarefa nao existe\n");
+                continue;
+            }
+
+            tarefaEncontrada->arquivoSaida = strdup(caminhoArquivo);
+            tarefaEncontrada->modoSaida = 1;
+
+        }else if(strcmp(palavras[0], "append") == 0){
+            if (quantidade != 3){
+                fprintf(stderr, "Quantidade de arguemntos errada para append, tente denovo\n");
+                continue;
+            }
+
+            char *nomeTarefa = palavras[1];
+            char *caminhoArquivo = palavras[2];
+            Tarefas *tarefaEncontrada = buscarTarefa(nomeTarefa);
+
+            if (tarefaEncontrada == NULL){
+                fprintf(stderr, "A tarefa nao existe\n");
+                continue;
+            }
+
+            tarefaEncontrada->arquivoSaida = strdup(caminhoArquivo);
+            tarefaEncontrada->modoSaida = 2;
+
         }else{
+        
             fprintf(stderr, "\nComando desconhecido, tente novamente!\n");
         }
     }
