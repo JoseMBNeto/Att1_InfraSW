@@ -1,3 +1,4 @@
+#define _GNU_SOURCE //stdup estava dependendo desse define para funcionar
 #include <stdlib.h>
 #include <string.h>
 #include "tarefas.h"
@@ -9,12 +10,12 @@ static int quantidadeTarefas = 0;
 Tarefas criarTarefa (char *nome, char **palavras, int quantiaPalavras){
 
     Tarefas tarefaNova;
-    tarefaNova.nomeTarefa = nome;
+    tarefaNova.nomeTarefa = strdup(nome);
 
     tarefaNova.argumentos = malloc ((quantiaPalavras + 1) * sizeof(char *));
     
     for (int i = 0; i < quantiaPalavras; i++){
-        tarefaNova.argumentos[i] = palavras[i];
+        tarefaNova.argumentos[i] = strdup(palavras[i]);
     }
     
     tarefaNova.argumentos[quantiaPalavras] = NULL;

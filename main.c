@@ -5,6 +5,8 @@
 #include <string.h>
 #include <unistd.h>
 #include "separador.h"
+#include "tarefas.h"
+#include "processos.h"
 
 int main(int argc, char *argv[]) {
     
@@ -62,14 +64,59 @@ int main(int argc, char *argv[]) {
             break;
         }
 
-        //printf("Linha lida: %s\n", linha);
-
-        //Testando o separador
         char *palavras[50];
         int quantidade = separarPalavras(linha, palavras);
 
-        for (int i = 0; i < quantidade; i++){
-            printf("palavra[%d] = %s\n", i, palavras[i]);
+        if (strcmp(palavras[0], "task") == 0){
+            if (quantidade < 3){
+                fprintf(stderr, "\nQuantidade de argumentos errada para uma task\n");
+                continue;
+            }
+
+            char *nomeTarefa = palavras[1];
+            Tarefas novaTarefa = criarTarefa(nomeTarefa, &palavras[2], quantidade - 2);
+            adicionarTarefa(novaTarefa);
+            printf("\nTarefa cadastrada com sucesso\n");
+
+        }else if (strcmp(palavras[0], "run") == 0){
+            if (quantidade < 3){
+                fprintf(stderr, "\nQuantidade de argumentos insuficientes para um run\n");
+                continue;
+            }
+
+            char *modoExecucao = palavras[1];
+            int tarefasCitadas = quantidade - 2;
+            Tarefas tarefasExecutar[tarefasCitadas];
+            int tarefasEncontradas = 0;
+
+            for (int i = 0; i < tarefasCitadas; i++){
+                char *nomeProcurar = palavras[2 + i];
+                Tarefas *encontrada = buscarTarefa(nomeProcurar);
+
+                if (encontrada == NULL){
+                    fprintf(stderr, "Tarefa '%s' nao encontrada\n", nomeProcurar);
+                }else{
+                    tarefasExecutar[tarefasEncontradas] = *encontrada;
+                    tarefasEncontradas++;
+                }
+            }
+
+            if (tarefasEncontradas == 0){
+                fprintf(stderr, "Nenhuma tarefa para executar\n");
+                continue;
+            }
+
+            if (strcmp(modoExecucao, "sequential") == 0){
+                processoSequencia(tarefasExecutar, tarefasEncontradas);
+            }else if (strcmp(modoExecucao, "parallel") == 0){
+                processoParalelo(tarefasExecutar, tarefasEncontradas);
+            }else{
+                fprintf(stderr, "Execucao desconhecida\n");
+            }
+
+
+        }else{
+            fprintf(stderr, "\nComando desconhecido, tente novamente!\n");
         }
     }
 
