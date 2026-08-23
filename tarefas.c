@@ -1,5 +1,10 @@
 #include <stdlib.h>
+#include <string.h>
 #include "tarefas.h"
+
+static Tarefas *listaTarefas = NULL;
+static int capacidade = 0;
+static int quantidadeTarefas = 0;
 
 Tarefas criarTarefa (char *nome, char **palavras, int quantiaPalavras){
 
@@ -19,4 +24,28 @@ Tarefas criarTarefa (char *nome, char **palavras, int quantiaPalavras){
     tarefaNova.modoSaida = 0;
 
     return tarefaNova;
+}
+
+void adicionarTarefa(Tarefas novaTarefa){
+
+    if (quantidadeTarefas == capacidade){
+        if (capacidade == 0){
+            capacidade = 4;
+        }else{
+            capacidade = capacidade * 2;
+        }
+        listaTarefas = realloc(listaTarefas, capacidade * sizeof(Tarefas));
+    }
+    listaTarefas[quantidadeTarefas] = novaTarefa;
+    quantidadeTarefas++;
+}
+
+Tarefas *buscarTarefa(char *nome){
+
+    for (int i = 0; i < quantidadeTarefas; i++){
+        if (strcmp(listaTarefas[i].nomeTarefa, nome) == 0){
+            return &listaTarefas[i];
+        }
+    }
+    return NULL;
 }
