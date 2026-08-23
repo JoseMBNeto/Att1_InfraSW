@@ -1,15 +1,31 @@
+#define _GNU_SOURCE //stdup estava dependendo desse define para funcionar
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include <fcntl.h>
 #include <unistd.h>
 #include "processos.h"
 #include <sys/wait.h>
+
+static char *diretorioAtual = NULL;
+
+void definirDiretorio(char *caminho){
+    diretorioAtual = strdup(caminho);
+}
 
 pid_t processarTarefa(Tarefas tarefa){
 
     pid_t pid = fork();
 
     if (pid == 0){
+
+        if (diretorioAtual != NULL){
+            int resultado = chdir(diretorioAtual);
+            if (resultado == -1){
+                fprintf(stderr, "Nao foi possivel mudar o diretorio\n");
+                exit(1);
+            }
+        }
 
         if (tarefa.arquivoEntrada != NULL){
             int descritorEntrada = open(tarefa.arquivoEntrada, O_RDONLY);

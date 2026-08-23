@@ -168,6 +168,21 @@ int main(int argc, char *argv[]) {
             tarefaEncontrada->arquivoSaida = strdup(caminhoArquivo);
             tarefaEncontrada->modoSaida = 2;
 
+        }else if(strcmp(palavras[0], "workdir") == 0){
+            if (quantidade != 2){
+                fprintf(stderr, "Numero de argumentos errados para workdir\n");
+                continue;
+            }
+
+            char *caminho = palavras[1];
+
+            if (access(caminho, F_OK) == -1){
+                fprintf(stderr, "O diretorio nao existe\n");
+                continue;
+            }
+
+            definirDiretorio(caminho);
+
         }else{
         
             fprintf(stderr, "\nComando desconhecido, tente novamente!\n");
