@@ -1,14 +1,8 @@
 processflow: main.o tarefas.o processos.o separador.o
 	gcc main.o tarefas.o processos.o separador.o -o processflow
 
-teste: teste.o tarefas.o processos.o
-	gcc teste.o tarefas.o processos.o -o teste
-
 main.o: main.c
 	gcc -c main.c
-
-teste.o: teste.c
-	gcc -c teste.c
 
 separador.o: separador.c separador.h
 	gcc -c separador.c
