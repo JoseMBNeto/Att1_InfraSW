@@ -7,10 +7,52 @@
 #include "processos.h"
 #include <sys/wait.h>
 
+typedef struct Job{
+    int id;
+    pid_t pid;
+    char *nomeTarefa;
+    int finalizado;
+    int codSaida;
+}Job;
+
+static Job *listaJobs = NULL;
+static int capacidadeJobs = 0;
+static int quantidadeJobs = 0;
+static int proximoId = 1;
 static char *diretorioAtual = NULL;
 
 void definirDiretorio(char *caminho){
     diretorioAtual = strdup(caminho);
+}
+
+void iniciarJobs(Tarefas tarefa){
+    pid_t pid = processarTarefa(tarefa);
+
+    if (pid <= 0){
+        return;
+    }
+
+    if (quantidadeJobs == capacidadeJobs){
+        if (capacidadeJobs == 0){
+            capacidadeJobs = 4;
+        }else{
+            capacidadeJobs = capacidadeJobs * 2;
+        }
+        listaJobs = realloc(listaJobs, capacidadeJobs * sizeof(Job));
+    }
+
+    Job novoJob;
+    novoJob.id = proximoId;
+    novoJob.pid = pid;
+    novoJob.nomeTarefa = strdup(tarefa.nomeTarefa);
+    novoJob.finalizado = 0;
+    novoJob.codSaida = 0;
+    listaJobs[quantidadeJobs] = novoJob;
+    quantidadeJobs++;
+
+    printf("[%d] %d\n", proximoId, pid);
+    proximoId++;
+
 }
 
 pid_t processarTarefa(Tarefas tarefa){

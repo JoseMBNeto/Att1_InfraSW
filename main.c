@@ -1,6 +1,7 @@
 #define _GNU_SOURCE //importei porque o getline não estava funcionando sem ele
 #include <stdio.h>
 #include <stdbool.h>
+#include <sys/types.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
@@ -170,7 +171,7 @@ int main(int argc, char *argv[]) {
 
         }else if(strcmp(palavras[0], "workdir") == 0){
             if (quantidade != 2){
-                fprintf(stderr, "Numero de argumentos errados para workdir\n");
+                fprintf(stderr, "Quantidade de arguemntos errada para workdir, tente denovo\n");
                 continue;
             }
 
@@ -182,6 +183,25 @@ int main(int argc, char *argv[]) {
             }
 
             definirDiretorio(caminho);
+
+        }else if (strcmp(palavras[0], "start") ==0){
+            if (quantidade < 2){
+                fprintf(stderr, "Quantidade de arguemntos errada para start, tente denovo\n");
+                continue;
+            }
+
+            char *nomeTarefa = palavras[1];
+            Tarefas *tarefaEncontrada = buscarTarefa(nomeTarefa);
+
+            if (tarefaEncontrada == NULL){
+                fprintf(stderr, "A tarefa nao existe\n");
+                continue;
+            }
+            iniciarJobs(*tarefaEncontrada);
+
+        }else if (strcmp(palavras[0], "jobs") == 0){
+
+        }else if(strcmp(palavras[0], "wait")){
 
         }else{
         
