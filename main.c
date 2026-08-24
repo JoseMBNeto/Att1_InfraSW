@@ -224,6 +224,8 @@ int main(int argc, char *argv[]) {
     }
 
     free(linha);
+    liberarMemoria();
+    liberarJobs();
 
     return 0;
     

@@ -25,7 +25,7 @@ void definirDiretorio(char *caminho){
     diretorioAtual = strdup(caminho);
 }
 
-void iniciarJobs(Tarefas tarefa){
+void iniciarJobs (Tarefas tarefa){
 
     pid_t pid = processarTarefa(tarefa);
 
@@ -56,7 +56,7 @@ void iniciarJobs(Tarefas tarefa){
 
 }
 
-void listarJobs(){
+void listarJobs (){
 
     for (int i = 0; i < quantidadeJobs; i++){
         if (listaJobs[i].finalizado == 0){
@@ -77,7 +77,7 @@ void listarJobs(){
     }
 }
 
-void esperarJob(int idProcurado){
+void esperarJob (int idProcurado){
 
     for(int i = 0; i < quantidadeJobs; i++){
         if (listaJobs[i].id == idProcurado){
@@ -97,6 +97,13 @@ void esperarJob(int idProcurado){
     }
 
     fprintf(stderr, "Job [%d] nao encontrado\n", idProcurado);
+}
+
+void liberarJobs (){
+    for (int i = 0; i < quantidadeJobs; i++){
+        free(listaJobs[i].nomeTarefa);
+    }
+    free(listaJobs);
 }
 
 void processoPipe (Tarefas *listaTarefas, int quantidade){
@@ -151,7 +158,7 @@ void processoPipe (Tarefas *listaTarefas, int quantidade){
     }
 }
 
-pid_t processarTarefa(Tarefas tarefa){
+pid_t processarTarefa (Tarefas tarefa){
 
     pid_t pid = fork();
 
@@ -202,7 +209,7 @@ pid_t processarTarefa(Tarefas tarefa){
     }
 }
 
-void processoSequencia(Tarefas *lista, int quantidade){
+void processoSequencia (Tarefas *lista, int quantidade){
     
     for (int i = 0; i < quantidade; i++){
         pid_t pid = processarTarefa(lista[i]);
@@ -214,7 +221,7 @@ void processoSequencia(Tarefas *lista, int quantidade){
     }
 }
 
-void processoParalelo(Tarefas *lista, int quantidade){
+void processoParalelo (Tarefas *lista, int quantidade){
     pid_t *pids = malloc((quantidade) * sizeof(pid_t));
     
     for (int i = 0; i < quantidade; i++){

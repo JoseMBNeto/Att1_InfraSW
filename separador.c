@@ -1,7 +1,7 @@
 #include <string.h>
 #include "separador.h"
 
-int separarPalavras(char *linha, char **palavras){
+int separarPalavras (char *linha, char **palavras){
 
     int contador = 0;
 

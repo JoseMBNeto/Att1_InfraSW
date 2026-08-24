@@ -11,6 +11,7 @@ void definirDiretorio (char *caminho);
 void iniciarJobs (Tarefas tarefa);
 void esperarJob (int idProcurado);
 void listarJobs ();
+void liberarJobs ();
 void processoPipe (Tarefas *listaTarefas, int quantidade);
 
 #endif

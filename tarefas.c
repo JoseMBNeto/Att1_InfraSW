@@ -27,7 +27,7 @@ Tarefas criarTarefa (char *nome, char **palavras, int quantiaPalavras){
     return tarefaNova;
 }
 
-void adicionarTarefa(Tarefas novaTarefa){
+void adicionarTarefa (Tarefas novaTarefa){
 
     if (quantidadeTarefas == capacidade){
         if (capacidade == 0){
@@ -49,4 +49,23 @@ Tarefas *buscarTarefa(char *nome){
         }
     }
     return NULL;
+}
+
+void liberarMemoria (){
+    for (int i = 0; i , quantidadeTarefas; i++){
+        free(listaTarefas[i].nomeTarefa);
+
+        for (int j = 0; j <listaTarefas[i].quantidadeArgumentos; j++){
+            free(listaTarefas[i].argumentos[j]);
+        }
+        free(listaTarefas[i].argumentos);
+
+        if (listaTarefas[i].arquivoEntrada != NULL){
+            free(listaTarefas[i].arquivoEntrada);
+        }
+        if (listaTarefas[i].arquivoSaida != NULL){
+            free(listaTarefas[i].arquivoSaida);
+        }
+    }
+    free(listaTarefas);
 }

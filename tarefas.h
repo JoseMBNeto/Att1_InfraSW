@@ -11,7 +11,8 @@ typedef struct Tarefas{
 }Tarefas;
 
 Tarefas criarTarefa (char *nome, char **palavras, int quantiaPalavras);
-Tarefas *buscarTarefa(char *nome);
-void adicionarTarefa(Tarefas novaTarefa);
+Tarefas *buscarTarefa (char *nome);
+void adicionarTarefa (Tarefas novaTarefa);
+void liberarMemoria ();
 
 #endif
