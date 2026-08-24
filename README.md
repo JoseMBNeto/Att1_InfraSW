@@ -3,6 +3,9 @@
 ### Aluno: José Milton Batista Neto 
 ### Turma: 3A
 
+## Sistema Operacional
+#### Implementado e testado no WSL Ubuntu
+
 # Como compilar esse projeto
 
 ### Comandos disponíveis no makefile: 

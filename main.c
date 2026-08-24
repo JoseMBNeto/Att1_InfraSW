@@ -111,6 +111,8 @@ int main(int argc, char *argv[]) {
                 processoSequencia(tarefasExecutar, tarefasEncontradas);
             }else if (strcmp(modoExecucao, "parallel") == 0){
                 processoParalelo(tarefasExecutar, tarefasEncontradas);
+            }else if (strcmp(modoExecucao, "pipe") == 0){
+                processoPipe(tarefasExecutar, tarefasEncontradas);
             }else{
                 fprintf(stderr, "Execucao desconhecida\n");
             }

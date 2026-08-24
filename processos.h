@@ -9,7 +9,8 @@ void processoSequencia (Tarefas *listaTarefas, int quantia);
 void processoParalelo (Tarefas *listaTarefas, int quantia);
 void definirDiretorio (char *caminho);
 void iniciarJobs (Tarefas tarefa);
-void esperarJob(int idProcurado);
+void esperarJob (int idProcurado);
 void listarJobs ();
+void processoPipe (Tarefas *listaTarefas, int quantidade);
 
 #endif

@@ -584,3 +584,66 @@ processflow> exit
 [?2004lexit
 
 Script done on 2026-08-23 19:04:10-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-24 16:57:35-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="9"]
+Mon Aug 24 16:57:35 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/Att1_InfraSW
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ make processflow
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+gcc -c main.c
+gcc -c tarefas.c
+gcc -c processos.c
+gcc -c separador.c
+gcc main.o tarefas.o processos.o separador.o -o processflow
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ task [K./processflow
+[?2004lModo interativo
+processflow> task listar /bin/ls
+
+Tarefa cadastrada com sucesso
+processflow> tas ordenar /usr/bin. /sort
+
+Comando desconhecido, tente novamente!
+processflow> task      task ordenar /usr/nimn    bin/sort
+
+Tarefa cadastrada com sucesso
+processflow> tr ask contar /usr/bin/wx -l
+
+Tarefa cadastrada com sucesso
+processflow> run pipe listar ordenar contar
+processflow> run pipe listar ordenar contar
+processflow> run pipe listar ordenar contar
+processflow> exit
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-24 16:59:33-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-24 17:19:55-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="24"]
+Mon Aug 24 17:19:55 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/Att1_InfraSW
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ make processflow
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+make[1]: 'processflow' is up to date.
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ ./processflow
+[?2004lModo interativo
+processflow> task listar /bin/s ls
+
+Tarefa cadastrada com sucesso
+processflow> tas ordenar /use r/bin/sort
+
+Comando desconhecido, tente novamente!
+processflow> task    task ordenar /usr/bin/sort
+
+Tarefa cadastrada com sucesso
+processflow> task contar /usr/bin/wc -l
+
+Tarefa cadastrada com sucesso
+processflow> run pipe listar ordenar contar
+15
+processflow> exit
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-24 17:21:26-03:00 [COMMAND_EXIT_CODE="0"]

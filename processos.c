@@ -26,6 +26,7 @@ void definirDiretorio(char *caminho){
 }
 
 void iniciarJobs(Tarefas tarefa){
+
     pid_t pid = processarTarefa(tarefa);
 
     if (pid <= 0){
@@ -96,6 +97,58 @@ void esperarJob(int idProcurado){
     }
 
     fprintf(stderr, "Job [%d] nao encontrado\n", idProcurado);
+}
+
+void processoPipe (Tarefas *listaTarefas, int quantidade){
+
+    if (quantidade < 2){
+        fprintf(stderr, "O pipe precisa de pelo menos 2 tarefas\n");
+        return;
+    }
+
+    int nPipes = quantidade - 1;
+    int pipes[nPipes][2];
+
+    for (int i = 0; i < nPipes; i++){
+        if (pipe(pipes[i]) == -1){
+            fprintf(stderr, "Nao deu para criar o pipe\n");
+            return;
+        }
+    }
+
+    pid_t pids[quantidade];
+
+    for (int i = 0; i < quantidade; i++){
+        pids[i] = fork();
+
+        if (pids[i] == 0){
+            if (i > 0){
+                dup2(pipes[i-i][0], 0);
+            }
+            
+            if (i < quantidade - 1){
+                dup2(pipes[i][1], 1);
+            }
+
+            for (int j = 0; j < nPipes; j++){
+                close(pipes[j][0]);
+                close(pipes[j][1]);
+            }
+
+            execvp(listaTarefas[i].argumentos[0], listaTarefas[i].argumentos);
+            exit(1);
+        }
+    }
+
+    for (int j = 0; j < nPipes; j++){
+        close(pipes[j][0]);
+        close(pipes[j][1]);
+    }
+
+    for (int i = 0; i < quantidade; i++){
+        int status = 0;
+        waitpid(pids[i], &status, 0);
+    }
 }
 
 pid_t processarTarefa(Tarefas tarefa){
