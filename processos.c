@@ -55,6 +55,49 @@ void iniciarJobs(Tarefas tarefa){
 
 }
 
+void listarJobs(){
+
+    for (int i = 0; i < quantidadeJobs; i++){
+        if (listaJobs[i].finalizado == 0){
+            int status = 0;
+            pid_t resultado = waitpid(listaJobs[i].pid, &status, WNOHANG);
+
+            if (resultado > 0){
+                listaJobs[i].finalizado = 1;
+                listaJobs[i].codSaida = WEXITSTATUS(status);
+            }
+        }
+
+        if (listaJobs[i].finalizado == 1){
+            printf("[%d] %d %s Codigo finalizado %d\n", listaJobs[i].id, listaJobs[i].pid, listaJobs[i].nomeTarefa, listaJobs[i].codSaida);
+        }else{
+            printf("[%d] %d %s Rodando\n", listaJobs[i].id, listaJobs[i].pid, listaJobs[i].nomeTarefa);
+        }
+    }
+}
+
+void esperarJob(int idProcurado){
+
+    for(int i = 0; i < quantidadeJobs; i++){
+        if (listaJobs[i].id == idProcurado){
+            if (listaJobs[i].finalizado == 1){
+                printf("Job [%d] ja finalizado (cod: %d)\n", idProcurado, listaJobs[i].codSaida);
+                return;
+            }
+
+            int status = 0;
+            waitpid(listaJobs[i].pid, &status, 0);
+            listaJobs[i].finalizado = 1;
+            listaJobs[i].codSaida = WEXITSTATUS(status);
+
+            printf("Job [%d] finalizado (codigo %d)\n", idProcurado, listaJobs[i].codSaida);
+            return;
+        }
+    }
+
+    fprintf(stderr, "Job [%d] nao encontrado\n", idProcurado);
+}
+
 pid_t processarTarefa(Tarefas tarefa){
 
     pid_t pid = fork();

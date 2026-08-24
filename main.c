@@ -118,7 +118,7 @@ int main(int argc, char *argv[]) {
 
         }else if(strcmp(palavras[0], "input") == 0){
             if (quantidade != 3){
-                fprintf(stderr, "Quantidade de arguemntos errada para input, tente denovo\n");
+                fprintf(stderr, "Quantidade de argumentos errada para input, tente denovo\n");
                 continue;
             }
 
@@ -135,7 +135,7 @@ int main(int argc, char *argv[]) {
 
         }else if(strcmp(palavras[0], "output") == 0){
             if (quantidade != 3){
-                fprintf(stderr, "Quantidade de arguemntos errada para output, tente denovo\n");
+                fprintf(stderr, "Quantidade de argumentos errada para output, tente denovo\n");
                 continue;
             }
 
@@ -153,7 +153,7 @@ int main(int argc, char *argv[]) {
 
         }else if(strcmp(palavras[0], "append") == 0){
             if (quantidade != 3){
-                fprintf(stderr, "Quantidade de arguemntos errada para append, tente denovo\n");
+                fprintf(stderr, "Quantidade de argumentos errada para append, tente denovo\n");
                 continue;
             }
 
@@ -171,7 +171,7 @@ int main(int argc, char *argv[]) {
 
         }else if(strcmp(palavras[0], "workdir") == 0){
             if (quantidade != 2){
-                fprintf(stderr, "Quantidade de arguemntos errada para workdir, tente denovo\n");
+                fprintf(stderr, "Quantidade de argumentos errada para workdir, tente denovo\n");
                 continue;
             }
 
@@ -186,7 +186,7 @@ int main(int argc, char *argv[]) {
 
         }else if (strcmp(palavras[0], "start") ==0){
             if (quantidade < 2){
-                fprintf(stderr, "Quantidade de arguemntos errada para start, tente denovo\n");
+                fprintf(stderr, "Quantidade de argumentos errada para start, tente denovo\n");
                 continue;
             }
 
@@ -200,8 +200,16 @@ int main(int argc, char *argv[]) {
             iniciarJobs(*tarefaEncontrada);
 
         }else if (strcmp(palavras[0], "jobs") == 0){
+            listarJobs();
 
-        }else if(strcmp(palavras[0], "wait")){
+        }else if(strcmp(palavras[0], "wait") == 0){
+            if (quantidade != 2){
+                fprintf(stderr, "Quantidade de argumentos errada para wait, tente denovo\n");
+                continue;
+            }
+
+            int idProcurado = atoi(palavras[1]);
+            esperarJob(idProcurado);
 
         }else{
         
