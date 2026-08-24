@@ -61,3 +61,526 @@ processflow> exit
 [?2004lexit
 
 Script done on 2026-08-21 16:42:04-03:00 [COMMAND_EXIT_CODE="1"]
+Script started on 2026-08-22 18:08:52-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="20"]
+Sat Aug 22 18:08:52 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/Att1_InfraSW
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ mag[Kke prro[K[Kocessflow
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+gcc -c main.c
+gcc -c tarefas.c
+gcc -c processos.c
+gcc main.o tarefas.o processos.o -o processflow
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ ./[K[Kmake processflow[6Pclean[6Pexit./processflow teste.pf
+[?2004lModo workflow
+oi
+Linha lida: oi
+
+tchau
+Linha lida: tchau
+exit
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ ./pre[Kocessflow
+[?2004lModo interativo
+processflow> aaaa
+Linha lida: aaaa
+processflow> aa
+Linha lida: aa
+processflow> teste teste
+Linha lida: teste teste
+processflow> test te te te te
+Linha lida: test te te te te
+processflow> exit
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-22 18:09:36-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-22 19:53:33-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="33"]
+Sat Aug 22 19:53:33 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/Att1_InfraSW
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ make processflow
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+gcc -c main.c
+gcc -c tarefas.c
+gcc -c processos.c
+gcc -c separador.c
+[01m[Kseparador.c:[m[K In function ‘[01m[KsepararPalavras[m[K’:
+[01m[Kseparador.c:8:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kpalavra[m[K’ redeclared as different kind of symbol
+    8 |     char *[01;31m[Kpalavra[m[K = strtok(linha, " ");
+      |           [01;31m[K^~~~~~~[m[K
+[01m[Kseparador.c:4:41:[m[K [01;36m[Knote: [m[Kprevious definition of ‘[01m[Kpalavra[m[K’ with type ‘[01m[Kchar **[m[K’
+    4 | int separarPalavras(char *linha, [01;36m[Kchar **palavra[m[K){
+      |                                  [01;36m[K~~~~~~~^~~~~~~[m[K
+[01m[Kseparador.c:11:27:[m[K [01;35m[Kwarning: [m[Kassignment to ‘[01m[Kchar[m[K’ from ‘[01m[Kchar *[m[K’ makes integer from pointer without a cast [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   11 |         palavra[contador] [01;35m[K=[m[K palavra;
+      |                           [01;35m[K^[m[K
+make[1]: *** [Makefile:14: separador.o] Error 1
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-22 19:53:43-03:00 [COMMAND_EXIT_CODE="2"]
+Script started on 2026-08-22 19:59:36-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="30"]
+Sat Aug 22 19:59:36 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/Att1_InfraSW
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ exitmake processflow
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+gcc -c main.c
+gcc -c tarefas.c
+gcc -c processos.c
+gcc -c separador.c
+[01m[Kseparador.c:[m[K In function ‘[01m[KsepararPalavras[m[K’:
+[01m[Kseparador.c:11:27:[m[K [01;35m[Kwarning: [m[Kassignment to ‘[01m[Kchar[m[K’ from ‘[01m[Kchar *[m[K’ makes integer from pointer without a cast [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   11 |         palavra[contador] [01;35m[K=[m[K palavra;
+      |                           [01;35m[K^[m[K
+gcc main.o tarefas.o processos.o separador.o -o processflow
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-22 20:00:02-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-22 20:03:48-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="28"]
+Sat Aug 22 20:03:48 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/Att1_InfraSW
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ make processflow
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+gcc -c main.c
+gcc -c tarefas.c
+gcc -c processos.c
+gcc -c separador.c
+gcc main.o tarefas.o processos.o separador.o -o processflow
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ ./processflow
+[?2004lModo interativo
+processflow> task listar /bin/ls -l
+palavra[0] = task
+palavra[1] = listar
+palavra[2] = /bin/ls
+palavra[3] = -l
+processflow> exit
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ wxi[K[K[Kexit
+[?2004lexit
+
+Script done on 2026-08-22 20:04:40-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-23 14:20:14-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="7"]
+Sun Aug 23 14:20:14 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/Att1_InfraSW
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ make processflow
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+gcc -c main.c
+gcc -c tarefas.c
+gcc -c processos.c
+gcc -c separador.c
+gcc main.o tarefas.o processos.o separador.o -o processflow
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ ./processflow [K
+[?2004lModo interativo
+processflow> task listar /bin/ln s -l
+
+Tarefa cadastrada com sucesso
+processflow> task contar /us/ r/bin/wx -l    c -l
+
+Tarefa cadastrada com sucesso
+processflow> task listar
+Quantidade de argumentos errada para uma task
+processflow> asda adada
+Comando desconhecido, tente novamente!
+processflow> exit
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ w[Kexit
+[?2004lexit
+
+Script done on 2026-08-23 14:21:43-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-23 17:02:00-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="24"]
+Sun Aug 23 17:02:00 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/Att1_InfraSW
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ make processflow
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+gcc -c main.c
+[01m[Kmain.c:9:10:[m[K [01;31m[Kfatal error: [m[Kprocessos.h: No such file or directory
+    9 | #include [01;31m[K<processos.h>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~[m[K
+compilation terminated.
+make[1]: *** [Makefile:8: main.o] Error 1
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-23 17:02:14-03:00 [COMMAND_EXIT_CODE="2"]
+Script started on 2026-08-23 17:05:07-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="24"]
+Sun Aug 23 17:05:07 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/Att1_InfraSW
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ make [pro[K[K[K[Kprocessflow
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+gcc -c main.c
+gcc -c tarefas.c
+gcc -c processos.c
+gcc -c separador.c
+gcc main.o tarefas.o processos.o separador.o -o processflow
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ ./processflow
+[?2004lModo interativo
+processflow> task listar /n bin/ln -l
+
+Tarefa cadastrada com sucesso
+processflow> run sequential listar
+Tarefa 'listar' nao encontrada
+Nenhuma tarefa para executar
+processflow> exit 
+
+Comando desconhecido, tente novamente!
+processflow> ex  [?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-23 17:05:56-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-23 17:15:22-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="19"]
+Sun Aug 23 17:15:22 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/Att1_InfraSW
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ make c[Kprocessflow
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+gcc -c main.c
+gcc -c tarefas.c
+[01m[Ktarefas.c:[m[K In function ‘[01m[KcriarTarefa[m[K’:
+[01m[Ktarefas.c:13:29:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kstdup[m[K’; did you mean ‘[01m[Kstrdup[m[K’? [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   13 |     tarefaNova.nomeTarefa = [01;35m[Kstdup[m[K(nome);
+      |                             [01;35m[K^~~~~[m[K
+      |                             [32m[Kstrdup[m[K
+[01m[Ktarefas.c:13:27:[m[K [01;35m[Kwarning: [m[Kassignment to ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   13 |     tarefaNova.nomeTarefa [01;35m[K=[m[K stdup(nome);
+      |                           [01;35m[K^[m[K
+[01m[Ktarefas.c:18:34:[m[K [01;35m[Kwarning: [m[Kassignment to ‘[01m[Kchar *[m[K’ from ‘[01m[Kint[m[K’ makes pointer from integer without a cast [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   18 |         tarefaNova.argumentos[i] [01;35m[K=[m[K stdup(palavras[i]);
+      |                                  [01;35m[K^[m[K
+gcc -c processos.c
+gcc -c separador.c
+gcc main.o tarefas.o processos.o separador.o -o processflow
+/usr/bin/ld: tarefas.o: in function `criarTarefa':
+tarefas.c:(.text+0x29): undefined reference to `stdup'
+/usr/bin/ld: tarefas.c:(.text+0x74): undefined reference to `stdup'
+collect2: error: ld returned 1 exit status
+make[1]: *** [Makefile:2: processflow] Error 1
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-23 17:15:31-03:00 [COMMAND_EXIT_CODE="2"]
+Script started on 2026-08-23 17:16:52-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="30"]
+Sun Aug 23 17:16:52 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/Att1_InfraSW
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ make processflow
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+gcc -c tarefas.c
+gcc main.o tarefas.o processos.o separador.o -o processflow
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ ./propce[K[K[Kcessflow
+[?2004lModo interativo
+processflow> task listar /bin/ls -l
+
+Tarefa cadastrada com sucesso
+processflow> run sequential listar
+total 112
+-rw-r--r-- 1 miltonlnx miltonlnx   538 Aug 22 19:39 Makefile
+-rw-r--r-- 1 miltonlnx miltonlnx   399 Aug 21 16:50 README.md
+-rw-r--r-- 1 miltonlnx miltonlnx 17168 Aug 23 17:15 evidencias.log
+-rw-r--r-- 1 miltonlnx miltonlnx  3584 Aug 23 17:04 main.c
+-rw-r--r-- 1 miltonlnx miltonlnx  5728 Aug 23 17:15 main.o
+-rwxr-xr-x 1 miltonlnx miltonlnx 21400 Aug 23 17:16 processflow
+-rw-r--r-- 1 miltonlnx miltonlnx  1142 Aug 21 12:35 processos.c
+-rw-r--r-- 1 miltonlnx miltonlnx   254 Aug 19 18:56 processos.h
+-rw-r--r-- 1 miltonlnx miltonlnx  3088 Aug 23 17:15 processos.o
+-rw-r--r-- 1 miltonlnx miltonlnx   313 Aug 22 20:03 separador.c
+-rw-r--r-- 1 miltonlnx miltonlnx    99 Aug 22 19:57 separador.h
+-rw-r--r-- 1 miltonlnx miltonlnx  1648 Aug 23 17:15 separador.o
+-rw-r--r-- 1 miltonlnx miltonlnx  1393 Aug 23 17:16 tarefas.c
+-rw-r--r-- 1 miltonlnx miltonlnx   372 Aug 23 12:29 tarefas.h
+-rw-r--r-- 1 miltonlnx miltonlnx  2856 Aug 23 17:16 tarefas.o
+-rw-r--r-- 1 miltonlnx miltonlnx   293 Aug 21 15:19 teste.c
+-rw-r--r-- 1 miltonlnx miltonlnx    15 Aug 21 16:53 teste.pf
+processflow> task contar /urs/bin/wc -l makefile^[[D^[[D                Makefile
+
+Tarefa cadastrada com sucesso
+processflow> taskmo   mostrar /bin/cat Makeflie   ile
+
+Tarefa cadastrada com sucesso
+processflow> run sequential contar mostrar
+O programa não pode ser executadoprocessflow: main.o tarefas.o processos.o separador.o
+	gcc main.o tarefas.o processos.o separador.o -o processflow
+
+teste: teste.o tarefas.o processos.o
+	gcc teste.o tarefas.o processos.o -o teste
+
+main.o: main.c
+	gcc -c main.c
+
+teste.o: teste.c
+	gcc -c teste.c
+
+separador.o: separador.c separador.h
+	gcc -c separador.c
+
+tarefas.o: tarefas.c tarefas.h
+	gcc -c tarefas.c
+
+processos.o: processos.c processos.h
+	gcc -c processos.c
+
+log:
+	script -a evidencias.log -c "date; whoami; pwd; bash"
+
+clean:
+	rm -f *.o processflow
+
+.PHONY: clean logprocessflow> task esperaUm /bin/sleep 1
+
+Tarefa cadastrada com sucesso
+processflow> task esperaDois /bin/sleep 1
+
+Tarefa cadastrada com sucesso
+processflow> run parallel esperaUI m espera  Dois
+processflow> re un sequential testevazio
+Tarefa 'testevazio' nao encontrada
+Nenhuma tarefa para executar
+processflow> run ba  aaaa   ana listar
+Execucao desconhecida
+processflow> asf auefna
+
+Comando desconhecido, tente novamente!
+processflow> exit
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-23 17:21:02-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-23 18:09:34-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="20"]
+Sun Aug 23 18:09:34 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/Att1_InfraSW
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ make processflow
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+gcc -c main.c
+gcc -c tarefas.c
+gcc -c processos.c
+gcc -c separador.c
+gcc main.o tarefas.o processos.o separador.o -o processflow
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ tak [K[Ksk listar /boin[K[K[Kin/ls - k[Kl[K[K[Kl[K-l
+[?2004lCommand 'task' not found, but can be installed with:
+sudo snap install task         # version v3.51.1, or
+sudo apt  install taskwarrior  # version 2.6.2+dfsg-1
+See 'snap info task' for additional versions.
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-23 18:10:08-03:00 [COMMAND_EXIT_CODE="127"]
+Script started on 2026-08-23 18:10:54-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="20"]
+Sun Aug 23 18:10:54 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/Att1_InfraSW
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ make processflow
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+make[1]: 'processflow' is up to date.
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ make clean
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+rm -f *.o processflow
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ make log[K[K[Kprocessflow
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+gcc -c main.c
+gcc -c tarefas.c
+gcc -c processos.c
+gcc -c separador.c
+gcc main.o tarefas.o processos.o separador.o -o processflow
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ ./processflow
+[?2004lModo interativo
+processflow> task listar /bin/ls -l
+
+Tarefa cadastrada com sucesso
+processflow> output listar resultado.txt
+processflow> run sequantial      ential listar
+processflow> exit
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ cat resultado.txt 
+[?2004ltotal 120
+-rw-r--r-- 1 miltonlnx miltonlnx   538 Aug 22 19:39 Makefile
+-rw-r--r-- 1 miltonlnx miltonlnx   399 Aug 21 16:50 README.md
+-rw-r--r-- 1 miltonlnx miltonlnx 22027 Aug 23 18:10 evidencias.log
+-rw-r--r-- 1 miltonlnx miltonlnx  5471 Aug 23 17:49 main.c
+-rw-r--r-- 1 miltonlnx miltonlnx  7368 Aug 23 18:11 main.o
+-rwxr-xr-x 1 miltonlnx miltonlnx 21464 Aug 23 18:11 processflow
+-rw-r--r-- 1 miltonlnx miltonlnx  2050 Aug 23 18:08 processos.c
+-rw-r--r-- 1 miltonlnx miltonlnx   254 Aug 19 18:56 processos.h
+-rw-r--r-- 1 miltonlnx miltonlnx  3808 Aug 23 18:11 processos.o
+-rw-r--r-- 1 miltonlnx miltonlnx     0 Aug 23 18:11 resultado.txt
+-rw-r--r-- 1 miltonlnx miltonlnx   313 Aug 22 20:03 separador.c
+-rw-r--r-- 1 miltonlnx miltonlnx    99 Aug 22 19:57 separador.h
+-rw-r--r-- 1 miltonlnx miltonlnx  1648 Aug 23 18:11 separador.o
+-rw-r--r-- 1 miltonlnx miltonlnx  1393 Aug 23 17:16 tarefas.c
+-rw-r--r-- 1 miltonlnx miltonlnx   372 Aug 23 12:29 tarefas.h
+-rw-r--r-- 1 miltonlnx miltonlnx  2856 Aug 23 18:11 tarefas.o
+-rw-r--r-- 1 miltonlnx miltonlnx   293 Aug 21 15:19 teste.c
+-rw-r--r-- 1 miltonlnx miltonlnx    15 Aug 21 16:53 teste.pf
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [K]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ cat resultado.txt [5P./processflow
+[?2004lModo interativo
+processflow> t ^[[A^[[A^[[A            task l; istar /bin/ls -l
+
+Tarefa cadastrada com sucesso
+processflow> append listar resultado.txt
+processflow> run sequential listar
+processflow> exit
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ cat resultado.txt
+[?2004ltotal 120
+-rw-r--r-- 1 miltonlnx miltonlnx   538 Aug 22 19:39 Makefile
+-rw-r--r-- 1 miltonlnx miltonlnx   399 Aug 21 16:50 README.md
+-rw-r--r-- 1 miltonlnx miltonlnx 22027 Aug 23 18:10 evidencias.log
+-rw-r--r-- 1 miltonlnx miltonlnx  5471 Aug 23 17:49 main.c
+-rw-r--r-- 1 miltonlnx miltonlnx  7368 Aug 23 18:11 main.o
+-rwxr-xr-x 1 miltonlnx miltonlnx 21464 Aug 23 18:11 processflow
+-rw-r--r-- 1 miltonlnx miltonlnx  2050 Aug 23 18:08 processos.c
+-rw-r--r-- 1 miltonlnx miltonlnx   254 Aug 19 18:56 processos.h
+-rw-r--r-- 1 miltonlnx miltonlnx  3808 Aug 23 18:11 processos.o
+-rw-r--r-- 1 miltonlnx miltonlnx     0 Aug 23 18:11 resultado.txt
+-rw-r--r-- 1 miltonlnx miltonlnx   313 Aug 22 20:03 separador.c
+-rw-r--r-- 1 miltonlnx miltonlnx    99 Aug 22 19:57 separador.h
+-rw-r--r-- 1 miltonlnx miltonlnx  1648 Aug 23 18:11 separador.o
+-rw-r--r-- 1 miltonlnx miltonlnx  1393 Aug 23 17:16 tarefas.c
+-rw-r--r-- 1 miltonlnx miltonlnx   372 Aug 23 12:29 tarefas.h
+-rw-r--r-- 1 miltonlnx miltonlnx  2856 Aug 23 18:11 tarefas.o
+-rw-r--r-- 1 miltonlnx miltonlnx   293 Aug 21 15:19 teste.c
+-rw-r--r-- 1 miltonlnx miltonlnx    15 Aug 21 16:53 teste.pf
+total 128
+-rw-r--r-- 1 miltonlnx miltonlnx   538 Aug 22 19:39 Makefile
+-rw-r--r-- 1 miltonlnx miltonlnx   399 Aug 21 16:50 README.md
+-rw-r--r-- 1 miltonlnx miltonlnx 26123 Aug 23 18:12 evidencias.log
+-rw-r--r-- 1 miltonlnx miltonlnx  5471 Aug 23 17:49 main.c
+-rw-r--r-- 1 miltonlnx miltonlnx  7368 Aug 23 18:11 main.o
+-rwxr-xr-x 1 miltonlnx miltonlnx 21464 Aug 23 18:11 processflow
+-rw-r--r-- 1 miltonlnx miltonlnx  2050 Aug 23 18:08 processos.c
+-rw-r--r-- 1 miltonlnx miltonlnx   254 Aug 19 18:56 processos.h
+-rw-r--r-- 1 miltonlnx miltonlnx  3808 Aug 23 18:11 processos.o
+-rw-r--r-- 1 miltonlnx miltonlnx  1139 Aug 23 18:11 resultado.txt
+-rw-r--r-- 1 miltonlnx miltonlnx   313 Aug 22 20:03 separador.c
+-rw-r--r-- 1 miltonlnx miltonlnx    99 Aug 22 19:57 separador.h
+-rw-r--r-- 1 miltonlnx miltonlnx  1648 Aug 23 18:11 separador.o
+-rw-r--r-- 1 miltonlnx miltonlnx  1393 Aug 23 17:16 tarefas.c
+-rw-r--r-- 1 miltonlnx miltonlnx   372 Aug 23 12:29 tarefas.h
+-rw-r--r-- 1 miltonlnx miltonlnx  2856 Aug 23 18:11 tarefas.o
+-rw-r--r-- 1 miltonlnx miltonlnx   293 Aug 21 15:19 teste.c
+-rw-r--r-- 1 miltonlnx miltonlnx    15 Aug 21 16:53 teste.pf
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ printf ""b"a"n"a"n"a"\"a"b"a"c"a"x"i"[1P"i"\"u"v"a"\"n"[C > frutas.txt
+[?2004lbash: printf: missing unicode digit for \u
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ printf "banana\abacaxi\uva\n" > frutas.txt[25Pcat resultado.txt[4P./processflow
+[?2004lModo interativo
+processflow> task ordenar /usr/bin/sort
+
+Tarefa cadastrada com sucesso
+processflow> intput ordem nar fru	tas.txt
+
+Comando desconhecido, tente novamente!
+processflow> input ordenar frutas.txt\
+processflow> ^[[A^[[B^[[B            input ordenar frutas.txt
+processflow> run sequential ordenar
+bananabacaxi\uva
+processflow> exit
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ [7m./processflow[27m./processflow
+[?2004lModo interativo
+processflow> task ordenar /usr/bin/sort  
+
+Tarefa cadastrada com sucesso
+processflow> input ordenar grutas      frutas.txt
+processflow> output ordenar frutas_ordenadas.txt
+processflow> run sequential ordenar
+processflow> exit
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ cat frutas_ordenadas
+[?2004lcat: frutas_ordenadas: No such file or directory
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ cat frutas_ordenadas.txt
+[?2004lbananabacaxi\uva
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-23 18:17:33-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-23 18:55:47-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="29"]
+Sun Aug 23 18:55:47 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/Att1_InfraSW
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ make processflow
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+gcc -c main.c
+gcc -c tarefas.c
+gcc -c processos.c
+[01m[Kprocessos.c:[m[K In function ‘[01m[KdefinirDiretorio[m[K’:
+[01m[Kprocessos.c:11:22:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kstrdup[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   11 |     diretorioAtual = [01;35m[Kstrdup[m[K(caminho);
+      |                      [01;35m[K^~~~~~[m[K
+[01m[Kprocessos.c:11:22:[m[K [01;35m[Kwarning: [m[Kincompatible implicit declaration of built-in function ‘[01m[Kstrdup[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wbuiltin-declaration-mismatch-Wbuiltin-declaration-mismatch]8;;[m[K]
+gcc -c separador.c
+gcc main.o tarefas.o processos.o separador.o -o processflow
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-23 18:56:01-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-23 18:56:51-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="29"]
+Sun Aug 23 18:56:51 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/Att1_InfraSW
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ make processflow
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+gcc -c main.c
+gcc -c tarefas.c
+gcc -c processos.c
+[01m[Kprocessos.c:[m[K In function ‘[01m[KdefinirDiretorio[m[K’:
+[01m[Kprocessos.c:12:22:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kstrdup[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   12 |     diretorioAtual = [01;35m[Kstrdup[m[K(caminho);
+      |                      [01;35m[K^~~~~~[m[K
+[01m[Kprocessos.c:12:22:[m[K [01;35m[Kwarning: [m[Kincompatible implicit declaration of built-in function ‘[01m[Kstrdup[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wbuiltin-declaration-mismatch-Wbuiltin-declaration-mismatch]8;;[m[K]
+gcc -c separador.c
+gcc main.o tarefas.o processos.o separador.o -o processflow
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-23 18:57:00-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-23 19:03:10-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="29"]
+Sun Aug 23 19:03:10 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/Att1_InfraSW
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ make processflow
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+gcc -c main.c
+gcc -c tarefas.c
+gcc -c processos.c
+gcc -c separador.c
+gcc main.o tarefas.o processos.o separador.o -o processflow
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/Att1_InfraSW'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ ./processflow
+[?2004lModo interativo
+processflow> task listar /bin/ls -l
+
+Tarefa cadastrada com sucesso
+processflow> wordir /tmp
+
+Comando desconhecido, tente novamente!
+processflow> workdir /tmp
+processflow> run sequential listar
+total 28
+drwxr-xr-x 3 miltonlnx miltonlnx 4096 Aug 23 12:08 cpptools
+drwxr-xr-x 3 miltonlnx miltonlnx 4096 Aug 23 12:01 node-compile-cache
+drwx------ 2 root      root      4096 Aug 23 12:00 snap-private-tmp
+drwx------ 3 root      root      4096 Aug 23 15:36 systemd-private-7c9b5ab3165946ca8f315968b3457f29-polkit.service-FMMLuV
+drwx------ 3 root      root      4096 Aug 23 12:00 systemd-private-7c9b5ab3165946ca8f315968b3457f29-systemd-logind.service-GcZg72
+drwx------ 3 root      root      4096 Aug 23 12:00 systemd-private-7c9b5ab3165946ca8f315968b3457f29-systemd-resolved.service-Q57DAk
+drwx------ 3 root      root      4096 Aug 23 12:00 systemd-private-7c9b5ab3165946ca8f315968b3457f29-systemd-timesyncd.service-Wo7OvO
+processflow> workdir a/a/a/a
+O diretorio nao existe
+processflow> exit
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/Att1_InfraSW[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/Att1_InfraSW[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-23 19:04:10-03:00 [COMMAND_EXIT_CODE="0"]
